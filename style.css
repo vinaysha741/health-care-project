@@ -1,0 +1,90 @@
+/* Sehat Care - simple stylesheet. No external fonts or libraries. */
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background-color: #f2f2f2;
+  color: black;
+}
+
+h1, h2, h3 { font-family: "Times New Roman", serif; }
+h1 { font-size: 36px; }
+h2 { font-size: 28px; }
+h3 { font-size: 20px; }
+
+a { color: blue; }
+
+.container { width: 900px; max-width: 95%; margin: 0 auto; }
+
+/* ----- top bar ----- */
+.site-header { background-color: green; padding: 10px 0; }
+.nav { text-align: center; }
+.brand { color: white; font-size: 24px; font-weight: bold; text-decoration: none; display: block; margin-bottom: 8px; }
+.brand-icon { margin-right: 5px; }
+.nav-links a { color: white; margin: 0 8px; }
+.menu-toggle { display: none; }
+
+/* ----- sections ----- */
+.section { padding: 25px 0; border-bottom: 1px solid gray; }
+.section-muted { background-color: #e0e0e0; }
+.hero { background-color: #cfe8cf; padding: 30px 0; border-bottom: 2px solid green; }
+.eyebrow { font-weight: bold; color: green; }
+.two-col, .hero-grid { display: block; }
+
+/* ----- buttons ----- */
+.btn { display: inline-block; background-color: #dddddd; color: black; border: 2px outset gray; padding: 6px 12px; font-size: 15px; text-decoration: none; cursor: pointer; margin: 3px; }
+.btn-primary { background-color: green; color: white; }
+.hero-actions { margin: 10px 0; }
+
+/* ----- small boxes ----- */
+.quick-facts div { border: 1px solid black; background-color: white; padding: 5px; margin: 5px 0; }
+.quick-facts strong, .quick-facts small { display: block; }
+.info-panel, .service-card, .staff-box { background-color: white; border: 1px solid black; padding: 10px; margin: 10px 0; }
+.info-row { padding: 5px 0; border-bottom: 1px dotted gray; }
+.info-row strong, .info-row small { display: block; }
+.service-grid { display: block; }
+.photo-box { border: 2px dashed gray; background-color: white; text-align: center; padding: 40px 10px; margin: 10px 0; }
+
+/* ----- form ----- */
+.form-wrap { max-width: 700px; }
+form { background-color: white; border: 2px solid black; padding: 10px; }
+.form-section { border: 1px solid gray; padding: 10px; margin-bottom: 10px; }
+label { display: block; margin: 8px 0; font-weight: bold; }
+input, select, textarea { display: block; width: 95%; font-size: 15px; padding: 4px; margin-top: 3px; font-family: Arial, sans-serif; }
+input[type=checkbox] { display: inline; width: auto; }
+.check-line, .consent { font-weight: normal; }
+.consent input, .check-line input { margin-right: 6px; }
+.slot-info { font-size: 14px; color: darkblue; }
+.privacy-note { font-size: 13px; }
+.form-message { display: none; }
+.form-message.error { display: block; color: red; font-weight: bold; margin: 8px 0; }
+.small-error { color: red; }
+
+/* ----- confirmation ----- */
+.confirmation { background-color: white; border: 2px solid green; padding: 15px; margin-top: 15px; }
+.hidden { display: none !important; }
+.success-icon { font-size: 30px; color: green; }
+.badge { font-weight: bold; color: green; }
+.detail { border-bottom: 1px solid gray; padding: 4px 0; }
+.detail span { display: inline-block; width: 140px; }
+
+/* ----- staff table ----- */
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; background-color: white; }
+th, td { border: 1px solid black; padding: 5px; text-align: left; font-size: 14px; }
+th { background-color: #cccccc; }
+td select { width: auto; display: inline; }
+.tag { border: 1px solid gray; padding: 1px 4px; }
+
+/* ----- footer ----- */
+.cta { background-color: #cccccc; padding: 15px 0; }
+.map-placeholder { border: 2px dashed gray; background-color: white; padding: 30px 10px; text-align: center; }
+footer { background-color: #333333; color: white; padding: 12px 0; text-align: center; font-size: 14px; }
+
+/* ----- print: only the confirmation ----- */
+@media print {
+  body * { visibility: hidden; }
+  .confirmation, .confirmation * { visibility: visible; }
+  .confirmation { position: absolute; left: 0; top: 0; }
+}
